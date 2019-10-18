@@ -1,61 +1,48 @@
-"use strict";
+const gulp = require('gulp')
 
-// Load plugins
-const browsersync = require("browser-sync").create();
-const del = require("del");
-const gulp = require("gulp");
-const merge = require("merge-stream");
+const sass = require('gulp-sass')
+const csscomb = require('gulp-csscomb')
+const autoprefixer = require('gulp-autoprefixer')
+const uglify = require('gulp-uglify')
+const babel = require('gulp-babel')
+const plumber = require('gulp-plumber')
+const browserSync = require('browser-sync')
+const sourcemaps = require('gulp-sourcemaps')
+const cleanCSS = require('gulp-clean-css')
 
-// BrowserSync
-function browserSync(done) {
-  browsersync.init({
+gulp.task('sass', function () {
+  return gulp
+    .src([ './assets/scss/style.scss' ])
+    .pipe(plumber())
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(sourcemaps.write())
+    .pipe(csscomb())
+    .pipe(autoprefixer())
+    .pipe(cleanCSS())
+    .pipe(gulp.dest('./assets/css'))
+})
+
+gulp.task('js', function () {
+  return gulp
+    .src('./assets/js/*.js')
+    .pipe(plumber())
+    .pipe(
+      babel({
+        presets: [ '@babel/env' ]
+      })
+    )
+    .pipe(uglify())
+    .pipe(gulp.dest('./js'))
+})
+
+gulp.task('watch', function () {
+  browserSync.init({
     server: {
-      baseDir: "./"
-    },
-    port: 3000
-  });
-  done();
-}
+      baseDir: './'
+    }
+  })
 
-// BrowserSync reload
-function browserSyncReload(done) {
-  browsersync.reload();
-  done();
-}
-
-// Clean vendor
-function clean() {
-  return del(["./vendor/"]);
-}
-
-// Bring third party dependencies from node_modules into vendor directory
-function modules() {
-  // Bootstrap
-  var bootstrap = gulp.src('./node_modules/bootstrap/dist/**/*')
-    .pipe(gulp.dest('./vendor/bootstrap'));
-  // jQuery
-  var jquery = gulp.src([
-      './node_modules/jquery/dist/*',
-      '!./node_modules/jquery/dist/core.js'
-    ])
-    .pipe(gulp.dest('./vendor/jquery'));
-  return merge(bootstrap, jquery);
-}
-
-// Watch files
-function watchFiles() {
-  gulp.watch("./**/*.css", browserSyncReload);
-  gulp.watch("./**/*.html", browserSyncReload);
-}
-
-// Define complex tasks
-const vendor = gulp.series(clean, modules);
-const build = gulp.series(vendor);
-const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
-
-// Export tasks
-exports.clean = clean;
-exports.vendor = vendor;
-exports.build = build;
-exports.watch = watch;
-exports.default = build;
+  gulp.watch('./assets/scss/**/**.*', gulp.series('sass')).on('change', browserSync.reload)
+  gulp.watch('./assets/js/**/**.*', gulp.series('js')).on('change', browserSync.reload)
+  gulp.watch('./**/*.html').on('change', browserSync.reload)
+})
