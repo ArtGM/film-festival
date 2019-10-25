@@ -1,0 +1,39 @@
+/* ------------------------------ common style ------------------------------ */
+
+a,
+p,
+span {
+  font-family: $oswald;
+  color: inherit;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+a:not(.btn) {
+  transition: transform 0.2s linear;
+  &:hover {
+    color: inherit;
+    transform: scale(1.1);
+  }
+}
+body {
+  background-color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+  font-family: $kaushan;
+}
+a.btn {
+  color: $white;
+  background-color: $brown;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $light-brown;
+  }
+}

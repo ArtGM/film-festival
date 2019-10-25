@@ -1,0 +1,22 @@
+/* -------------------------------------------------------------------------- */
+/*                                index styles                                */
+/* -------------------------------------------------------------------------- */
+
+.index {
+  .carousel-item {
+    max-height: 800px;
+    overflow: hidden;
+  }
+
+  .index-content {
+    color: $white;
+    .main-title {
+    }
+  }
+
+  .last-news {
+    .card {
+      background-color: $grey;
+    }
+  }
+}

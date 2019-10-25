@@ -9,6 +9,7 @@ const plumber = require('gulp-plumber')
 const browserSync = require('browser-sync')
 const sourcemaps = require('gulp-sourcemaps')
 const cleanCSS = require('gulp-clean-css')
+const imagemin = require('gulp-imagemin')
 
 gulp.task('sass', function () {
   return gulp
@@ -33,6 +34,22 @@ gulp.task('js', function () {
     )
     .pipe(uglify())
     .pipe(gulp.dest('./js'))
+})
+
+gulp.task('img', () => {
+  return gulp
+    .src('./assets/img/src/**')
+    .pipe(
+      imagemin([
+        imagemin.gifsicle({ interlaced: true }),
+        imagemin.jpegtran({ progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+        imagemin.svgo({
+          plugins: [ { removeViewBox: true }, { cleanupIDs: false } ]
+        })
+      ])
+    )
+    .pipe(gulp.dest('assets/img'))
 })
 
 gulp.task('watch', function () {
