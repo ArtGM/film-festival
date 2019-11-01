@@ -1,0 +1,33 @@
+/* ------------------------------ common styles ----------------------------- */
+.breadcrumb-container {
+  .breadcrumb {
+    background-color: transparent;
+
+    .breadcrumb-item {
+      font-family: $oswald;
+      &:not(.active) {
+        color: $white;
+      }
+    }
+  }
+}
+
+.pagination {
+  .page-item {
+    .page-link,
+    .disabled {
+      border: 0;
+      background-color: $noir;
+    }
+    &:not(.disabled) {
+      .page-link {
+        color: $white;
+      }
+    }
+    &.active {
+      .page-link {
+        background-color: $red;
+      }
+    }
+  }
+}

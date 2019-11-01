@@ -11,10 +11,10 @@
   <title>Association Les films de plein air</title>
 
   <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -23,9 +23,9 @@
   <header class="header container-fluid">
     <!-- Navigation -->
     <nav class="main-menu navbar navbar-expand-lg static-top">
-      <h1 class="main-logo"><a class="navbar-brand" href="./index.html"><i class="material-icons">
-            movie
-          </i> Les films de plein air</a></h1>
+      <h1 class="main-logo">
+        <a class="navbar-brand" href="./index.html">
+          <i class="material-icons">movie</i> Les films de plein air</a></h1>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -33,8 +33,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="./index.html">Accueil
-            </a>
+            <a class="nav-link" href="./index.html">Accueil</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/actualites.html">Actualités</a>
@@ -50,24 +49,55 @@
 
   <!-- Page Content -->
   <div class="container">
+    <div class="row breadcrumb-container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Programmation</li>
+        </ol>
+      </nav>
+    </div>
+
     <h1 class="text-white text-center mt-5 mb-5">Programmation</h1>
     <div class="row">
-      <div class="col-sm-3"></div>
-      <div class="col-sm-3"></div>
-      <div class="col-sm-3"></div>
-      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        <img src="./assets/img/src/tv.jpg" class="img-fluid" alt="Responsive image">
+      </div>
+      <div class="col-sm-6">
+        <h2>News</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi vel repellendus, aut aliquid excepturi
+          voluptates earum ipsum dignissimos ex ad nostrum quod cum ea laboriosam, incidunt corrupti, non sunt vero.</p>
+
+      </div>
     </div>
   </div>
 
-  <footer class="footer">
+  <!-- ------------------------------- footer -------------------------------- -->
+
+  <footer class="footer pt-5 pb-5">
     <div class="container">
       <div class="row">
-        <div class="col-4">lorem</div>
-        <div class="col-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, numquam quas dicta ratione
-          expedita nostrum accusamus laboriosam iure quos dolorum officia perferendis non porro recusandae repudiandae.
-          Obcaecati officiis eaque mollitia?</div>
-        <div class="col-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia beatae qui, quibusdam soluta
-          ex modi ipsum rem sit vero iste corporis sapiente iusto, labore quos? Velit similique voluptates modi quia.
+        <div class="col-4 text-center">
+          <i class="material-icons md-48">
+            movie
+          </i>
+          <h4>les films du plein air</h4>
+        </div>
+        <div class="col-4">
+          <ul class="list-group list-group-flush">
+            <p class="text-left text-uppercase">Informations</p>
+            <li class="list-group-item">lorem</li>
+            <li class="list-group-item">ipsum</li>
+            <li class="list-group-item">dolor</li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <p class="text-center text-uppercase">Contact</p>
+          <address class="text-center">Jennifer Edwards</address>
+          <address class="text-center">Association Les film de pleain air</address>
+          <address class="text-center">75000 Paris</address>
+
+          <a href="mailto:jennifer.edwards@email.me" class="text-center d-block">jennifer.edwards@email.me</a>
         </div>
       </div>
     </div>

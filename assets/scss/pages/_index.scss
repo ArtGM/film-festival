@@ -16,7 +16,12 @@
 
   .last-news {
     .card {
-      background-color: $grey;
+      background-color: transparent;
+
+      .card-title,
+      .card-text {
+        color: $white;
+      }
     }
   }
 }

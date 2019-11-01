@@ -8,7 +8,7 @@ span {
   font-weight: 300;
   letter-spacing: 1px;
 }
-a:not(.btn) {
+a:not(.btn):not(.page-link) {
   transition: transform 0.2s linear;
   &:hover {
     color: inherit;
@@ -30,10 +30,10 @@ h6 {
 }
 a.btn {
   color: $white;
-  background-color: $brown;
+  background-color: $red;
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    background-color: $light-brown;
+    background-color: $light-red;
   }
 }

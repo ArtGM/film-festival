@@ -1,8 +1,16 @@
 /* -------------------------------------------------------------------------- */
-/*                               footer stytles                               */
+/*                               footer styles                               */
 /* -------------------------------------------------------------------------- */
 
 .footer {
   background-color: $noir;
   color: $white;
+
+  .list-group-item {
+    background-color: transparent;
+  }
+
+  .md-48 {
+    font-size: 48px;
+  }
 }
