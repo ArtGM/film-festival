@@ -1,12 +1,10 @@
 /* -------------------------------------------------------------------------- */
-/*                               footer styles                               */
+/*                              prog page styles                              */
 /* -------------------------------------------------------------------------- */
 
-.footer {
-  background-color: $noir;
+.date-fest {
+  font-family: $kaushan;
+  margin: 30px 0;
   color: $white;
-
-  .md-48 {
-    font-size: 48px;
-  }
+  font-size: 30px;
 }
