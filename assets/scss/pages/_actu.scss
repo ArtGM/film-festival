@@ -4,8 +4,11 @@
 article.article {
   color: $white;
   margin-bottom: 80px;
-  &:nth-child(even) {
-    text-align: right;
+
+  @media screen and (min-width: 576px) {
+    &:nth-child(odd) {
+      text-align: right;
+    }
   }
 }
 
