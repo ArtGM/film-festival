@@ -12,3 +12,14 @@
 .tab-content {
   color: $white;
 }
+
+hr {
+  border-color: rgba($grey, 0.5);
+}
+
+.title {
+  font-size: 30px;
+  color: $white;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}

@@ -9,6 +9,15 @@
     a {
       font-family: $kaushan;
       font-size: 2rem;
+      display: flex;
+      align-items: center;
+      & > i {
+        margin-right: 10px;
+      }
+
+      @media screen and (max-width: 450px) {
+        font-size: 1rem;
+      }
     }
   }
 }

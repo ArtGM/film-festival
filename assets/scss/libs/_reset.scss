@@ -15,6 +15,9 @@ a:not(.btn):not(.page-link):not(.list-group-item) {
     transform: scale(1.1);
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: $black;
 }
