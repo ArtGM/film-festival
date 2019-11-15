@@ -11,7 +11,12 @@
   .index-content {
     color: $white;
   }
-
+  .main-title {
+    font-family: $kaushan;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
   .last-news {
     .card {
       background-color: transparent;
@@ -19,6 +24,12 @@
       .card-title,
       .card-text {
         color: $white;
+      }
+      .card-title {
+        font-size: 1.75rem;
+        font-family: $kaushan;
+        font-weight: 500;
+        line-height: 1.2;
       }
     }
   }
