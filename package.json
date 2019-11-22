@@ -1,54 +1,39 @@
 {
-    "title": "Bare",
-    "name": "startbootstrap-bare",
-    "version": "4.2.1",
-    "scripts": {
-        "start": "node_modules/.bin/gulp watch"
-    },
-    "description": "A basic HTML starter template for Bootstrap",
-    "keywords": [
-        "css",
-        "sass",
-        "html",
-        "responsive",
-        "theme",
-        "template"
-    ],
-    "homepage": "https://startbootstrap.com/template-overviews/bare",
-    "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-bare/issues",
-        "email": "feedback@startbootstrap.com"
-    },
-    "license": "MIT",
-    "author": "Start Bootstrap",
-    "contributors": [
-        "David Miller (http://davidmiller.io/)"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-bare.git"
-    },
-    "dependencies": {
-        "@babel/core": "^7.0.0",
-        "bootstrap": "4.3.1",
-        "gulp-autoprefixer": "^7.0.1",
-        "gulp-babel": "^8.0.0",
-        "gulp-clean-css": "^4.2.0",
-        "gulp-csscomb": "^3.0.8",
-        "gulp-plumber": "^1.2.1",
-        "gulp-sass": "^4.0.2",
-        "gulp-sourcemaps": "^2.6.5",
-        "gulp-uglify": "^3.0.2",
-        "jquery": "3.4.1",
-        "lodash.template": "^4.5.0",
-        "node-sass": "^4.12.0",
-        "popper.js": "^1.14.7"
-    },
-    "devDependencies": {
-        "browser-sync": "2.26.7",
-        "del": "^4.1.1",
-        "gulp": "^4.0.2",
-        "gulp-imagemin": "^6.1.1",
-        "merge-stream": "2.0.0"
-    }
+  "title": "Les Films de plein air",
+  "name": "film-festival",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node_modules/.bin/gulp watch"
+  },
+  "description": "Prototype pour le site \"les film de plein air\"",
+  "keywords": [ "css", "sass", "html", "responsive", "theme", "template" ],
+  "license": "MIT",
+  "author": "Arthur Morisson",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArtGM/film-festival.git"
+  },
+  "dependencies": {
+    "@babel/core": "^7.0.0",
+    "bootstrap": "4.3.1",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "jquery": "3.4.1",
+    "lodash.template": "^4.5.0",
+    "node-sass": "^4.12.0",
+    "popper.js": "^1.14.7"
+  },
+  "devDependencies": {
+    "browser-sync": "2.26.7",
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^6.1.1",
+    "merge-stream": "2.0.0"
+  }
 }
