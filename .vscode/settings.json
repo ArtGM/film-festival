@@ -1,0 +1,13 @@
+{
+  "sqltools.connections": [
+    {
+      "askForPassword": false,
+      "database": "wordcli",
+      "dialect": "MySQL",
+      "name": "local",
+      "port": 3306,
+      "server": "localhost",
+      "username": "root"
+    }
+  ]
+}
