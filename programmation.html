@@ -344,6 +344,7 @@
 
     <div class="row" id="inscription">
       <p class="text-center title col-12">Inscription</p>
+      <p class="alert alert-warning">Tout les champs sont requis</p>
     </div>
     <form class="mb-5" id="formulaire-inscription">
       <div class="form-group">
@@ -351,12 +352,12 @@
         <input type="text" class="form-control" id="name" placeholder="Votre Nom" required>
       </div>
       <div class="form-group">
-        <label for="email">Adresse Email (obligatoire)</label>
+        <label for="email">Adresse Email</label>
         <input type="email" class="form-control" id="email" placeholder="email@example.com" required>
       </div>
       <div class="form-group">
         <label for="selectFilm">Selection du Film</label>
-        <select class="form-control" id="selectFilm">
+        <select class="form-control" id="selectFilm" required>
           <option>La Haine - 5 Août - 18h</option>
           <option>Persepolis - 5 Août - 20h</option>
           <option>Un Prophète - 5 Août - 22h</option>
@@ -371,7 +372,7 @@
           <option>Les Valseuses - 8 Août - 22h</option>
         </select>
         <label for="nb-people">Nombre de personne(s)</label>
-        <input class="form-control" type="number" name="nb-people" id="nb-people">
+        <input class="form-control" type="number" name="nb-people" id="nb-people" required>
       </div>
       <button type="submit" class="btn">Envoyer</button>
     </form>
